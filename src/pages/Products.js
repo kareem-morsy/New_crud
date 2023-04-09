@@ -12,7 +12,7 @@ function Products() {
    
       <div className='products-Container'>
         <h1 className='m-2'>Products Page</h1>
-        <Link to='/products/add' className='btn btn-success m-3'>Add New Product</Link>
+        <Link to='add' className='btn btn-success m-3'>Add New Product</Link>
 
         <table className="table table-striped">
           <thead>

@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import ReactDOM from "react-dom/client";
-import { Route, Routes } from "react-router-dom";
+import { Outlet, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import AddProduct from "./pages/AddProduct";
@@ -25,9 +25,14 @@ function App() {
           <div className="col-md-10">
             <Routes>
               <Route path="/" element={<Home/>} />
-              <Route path="/products" element={<Products/>} />
-              <Route path="/products/add" element={<AddProduct/>}/>
-              <Route path="products/:productId" element={<ProductDetails/>}/>
+
+              <Route   path="products" element={<Outlet/>}>
+                <Route path=""         element={<Products/>}/>
+                <Route path="add"      element={<AddProduct/>}/>
+                <Route path=":productId" element={<ProductDetails/>}/>
+              </Route>
+              
+             
             </Routes>
             
           </div>
