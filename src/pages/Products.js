@@ -51,7 +51,7 @@ function Products() {
                 <tr key={index}>
                   <th scope="row">{product.id}</th>
                   <td>{product.title}</td>
-                  <td>{product.description.slice(0,50)}</td>
+                  {/* <td>{product.description.slice(0,50)}</td> */}
                   <td>{product.price}</td>
                   <td>
                     <button className='btn btn-danger btn-sm m-1' onClick={()=>deleteProduct(product.id)}>Delete</button>
